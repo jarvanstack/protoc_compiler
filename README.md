@@ -10,8 +10,8 @@
 
 ```protobuf
 syntax = "proto3";
-package proto1;
-option go_package = "proto1/";
+package proto;
+option go_package = "proto1";
 service User {
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
 }
@@ -32,6 +32,7 @@ message UserDTO {
 ```bash
 # 为普通 go 文件
 protoc --go_out=plugins=grpc,paths=source_relative:. ./user.proto 
-# 安装缺失的依赖
+# 安装缺失的依赖,
 go mod tidy
+# 依赖可以无法自动加载可能是 vscode go tools 的问题, 更新下
 ```

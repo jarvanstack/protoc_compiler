@@ -1,6 +1,6 @@
 syntax = "proto3";
-package proto1;
-option go_package = "proto1/";
+package proto;
+option go_package = "proto/";
 service User {
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
 }
