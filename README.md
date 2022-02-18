@@ -11,7 +11,7 @@
 ```protobuf
 syntax = "proto3";
 package proto;
-option go_package = "proto1";
+option go_package = "/user";
 service User {
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
 }
